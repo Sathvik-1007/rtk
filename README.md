@@ -138,6 +138,9 @@ Four strategies applied per command type:
 ### Files
 ```bash
 rtk ls .                        # Token-optimized directory tree
+rtk eza .                       # eza listing (flat/long/tree) token-optimized
+rtk eza -l .                    # Compact long format: name + size only
+rtk eza -T .                    # Tree view, noise dirs excluded
 rtk read file.rs                # Smart file reading
 rtk read file.rs -l aggressive  # Signatures only (strips bodies)
 rtk smart file.rs               # 2-line heuristic code summary
@@ -416,6 +419,7 @@ Blocked on upstream BeforeToolCallback support ([mistral-vibe#531](https://githu
 | `cat/head/tail <file>` | `rtk read <file>` |
 | `rg/grep <pattern>` | `rtk grep <pattern>` |
 | `ls` | `rtk ls` |
+| `eza` | `rtk eza` |
 | `vitest/jest` | `rtk vitest run` |
 | `tsc` | `rtk tsc` |
 | `eslint/biome` | `rtk lint` |
